@@ -1,0 +1,16 @@
+{
+  "name": "@multiple-package-project/components",
+  "version": "1.0.0",
+  "description": "A Components For multiple-package-project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@multiple-package-project/css-style": "workspace:*",
+    "@multiple-package-project/utils": "workspace:*"
+  }
+}
