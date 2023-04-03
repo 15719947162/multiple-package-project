@@ -2,3 +2,4 @@ packages:
 # 配置pnpm install执行所有的子包依赖安装，会将配置目录下所有包含package.json的包全部安装依赖，没配置的不执行
 - 'packages/*'
 - examples
+- internal/*
