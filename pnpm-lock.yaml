@@ -35,7 +35,11 @@ importers:
 
   packages/css-style: {}
 
-  packages/utils: {}
+  packages/utils:
+    dependencies:
+      lodash:
+        specifier: ^4.17.21
+        version: registry.npmmirror.com/lodash@4.17.21
 
 packages:
 
