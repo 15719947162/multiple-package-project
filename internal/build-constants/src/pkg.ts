@@ -1,0 +1,5 @@
+export const PKG_PREFIX = '@gangw'
+export const PKG_NAME = 'gangw'
+export const PKG_CAMELCASE_NAME = 'Gangw'
+export const PKG_CAMELCASE_LOCAL_NAME = 'GangwLocale'
+export const PKG_BRAND_NAME = 'Gangw'

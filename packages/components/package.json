@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@multiple-package-project/css-style": "workspace:*",
     "@multiple-package-project/utils": "workspace:*"
