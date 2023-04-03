@@ -1,15 +1,9 @@
 {
-  "name": "@gangw/build-constants",
-  "version": "0.0.2",
+  "name": "@multiple-package-project/build-constants",
+  "version": "0.0.1",
   "description": "Build Constants For Gangw",
   "type": "module",
-  "keywords": [
-    "build",
-    "build constants",
-    "constants"
-  ],
   "license": "MIT",
-  "author": "gang.wang",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -21,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangg-912/gangw.git"
+    "url": "git+https://github.com/15719947162/multiple-package-project.git"
   },
   "scripts": {
     "build": "unbuild",

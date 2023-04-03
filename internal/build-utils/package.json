@@ -1,15 +1,8 @@
 {
-  "name": "@gangw/build-utils",
+  "name": "@multiple-package-project/build-utils",
   "version": "0.0.1",
   "private": false,
-  "description": "Build Util For Gangw",
-  "keywords": [
-    "build",
-    "utils",
-    "build-utils"
-  ],
   "license": "MIT",
-  "author": "gang.wang",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -21,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangg-912/gangw.git"
+    "url": "git+https://github.com/15719947162/multiple-package-project.git"
   },
   "scripts": {
     "build": "unbuild",

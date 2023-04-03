@@ -1,20 +1,14 @@
 {
-  "name": "@gangw/build",
+  "name": "@multiple-package-project/build",
   "version": "0.0.1",
   "private": false,
-  "description": "Build Tool For Gangw",
-  "keywords": [
-    "gangw",
-    "build"
-  ],
   "license": "MIT",
-  "author": "gang.wang",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangg-912/gangw.git"
+    "url": "git+https://github.com/15719947162/multiple-package-project.git"
   },
   "scripts": {
     "start": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
@@ -25,8 +19,8 @@
     "vue": "^3.2.25"
   },
   "dependencies": {
-    "@gangw/build-constants": "workspace:*",
-    "@gangw/build-utils": "workspace:*",
+    "@multiple-package-project/build-constants": "workspace:*",
+    "@multiple-package-project/build-utils": "workspace:*",
     "@pnpm/find-workspace-packages": "^4.0.16",
     "@pnpm/logger": "^4.0.0",
     "@rollup/plugin-commonjs": "^22.0.1",
