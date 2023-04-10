@@ -2,7 +2,7 @@ import path from 'path'
 import { copyFile, mkdir } from 'fs/promises'
 import { copy } from 'fs-extra'
 import { parallel, series } from 'gulp'
-import { buildOutput, epOutput, epPackage, projRoot } from '@gangw/build-utils'
+import { buildOutput, epOutput, epPackage, projRoot } from '@multiple-package-project/build-utils'
 import { buildConfig, run, runTask, withTaskName } from './src'
 import type { TaskFunction } from 'gulp'
 import type { Module } from './src'
@@ -31,6 +31,7 @@ export const copyTypesDefinitions: TaskFunction = (done) => {
 }
 
 export const copyFullStyle = async () => {
+  /** ../../../dist/multiple-package-project */
   await mkdir(path.resolve(epOutput, 'dist'), { recursive: true })
   await copyFile(
     path.resolve(epOutput, 'theme-chalk/index.css'),
