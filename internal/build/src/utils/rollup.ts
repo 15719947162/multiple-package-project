@@ -1,4 +1,4 @@
-import { epPackage, getPackageDependencies } from '@gangw/build-utils'
+import { epPackage, getPackageDependencies } from '@multiple-package-project/build-utils'
 
 import type { OutputOptions, RollupBuild } from 'rollup'
 

@@ -1,6 +1,6 @@
 import path from 'path'
-import { PKG_NAME } from '@gangw/build-constants'
-import { epOutput } from '@gangw/build-utils'
+import { PKG_NAME } from '@multiple-package-project/build-constants'
+import { epOutput } from '@multiple-package-project/build-utils'
 
 import type { ModuleFormat } from 'rollup'
 

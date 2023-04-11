@@ -2,7 +2,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
+    "clean:dist": "rimraf dist",
+    "build": "pnpm run -C internal/build start",
+    "build:css": "pnpm run -C packages/css-style build"
   },
   "keywords": [],
   "author": "",
@@ -11,15 +14,20 @@
   "dependencies": {
     "@multiple-package-project/components": "workspace:*",
     "@multiple-package-project/css-style": "workspace:*",
+    "@multiple-package-project/hooks": "workspace:*",
     "@multiple-package-project/utils": "workspace:*",
     "axios": "^1.3.4",
     "lodash": "^4.17.21"
   },
+  "devDependencies": {
+    "@multiple-package-project/build": "workspace:*",
+    "@multiple-package-project/build-constants": "workspace:*",
+    "@multiple-package-project/build-utils": "workspace:*",
+    "gulp": "^4.0.2",
+    "sass": "^1.61.0"
+  },
   "engines": {
     "node": ">=16",
     "pnpm": ">=7"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2"
   }
 }

@@ -10,14 +10,14 @@ import consola from 'consola'
 import { epOutput } from '@multiple-package-project/build-utils'
 
 const distFolder = path.resolve(__dirname, 'dist')
-const distBundle = path.resolve(epOutput, 'theme-chalk')
+const distBundle = path.resolve(epOutput, 'css-style')
 
 /**
  * compile theme-chalk scss & minify
  * not use sass.sync().on('error', sass.logError) to throw exception
  * @returns
  */
-function buildThemeChalk() {
+function buildCssStyle() {
   const sass = gulpSass(dartSass)
   const noElPrefixFile = /(index|base|display)/
   return src(path.resolve(__dirname, 'src/*.scss'))
@@ -35,7 +35,7 @@ function buildThemeChalk() {
     .pipe(
       rename((path) => {
         if (!noElPrefixFile.test(path.basename)) {
-          path.basename = `gw-${path.basename}`
+          path.basename = `mpp-${path.basename}`
         }
       })
     )
@@ -43,9 +43,9 @@ function buildThemeChalk() {
 }
 
 /**
- * copy from packages/theme-chalk/dist to dist/gangw/theme-chalk
+ * copy from packages/theme-chalk/dist to dist/multiple-package-project/css-style
  */
-export function copyThemeChalkBundle() {
+export function copyCssStyleBundle() {
   return src(`${distFolder}/**`).pipe(dest(distBundle))
 }
 
@@ -53,15 +53,15 @@ export function copyThemeChalkBundle() {
  * copy source file to packages
  */
 
-export function copyThemeChalkSource() {
+export function copyCssStyleSource() {
   return src(path.resolve(__dirname, 'src/**')).pipe(
     dest(path.resolve(distBundle, 'src'))
   )
 }
 
 export const build = parallel(
-  copyThemeChalkSource,
-  series(buildThemeChalk, copyThemeChalkBundle)
+  copyCssStyleSource,
+  series(buildCssStyle, copyCssStyleBundle)
 )
 
 export default build

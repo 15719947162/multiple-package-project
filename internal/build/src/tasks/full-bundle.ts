@@ -13,9 +13,9 @@ import {
   PKG_BRAND_NAME,
   PKG_CAMELCASE_LOCAL_NAME,
   PKG_CAMELCASE_NAME,
-} from '@gangw/build-constants'
-import { epOutput, epRoot, localeRoot } from '@gangw/build-utils'
-import { version } from '../../../../packages/gangw/version'
+} from '@multiple-package-project/build-constants'
+import { epOutput, epRoot, localeRoot } from '@multiple-package-project/build-utils'
+import { version } from '../../../../packages/multiple-package-project/version'
 import { GangwAlias } from '../plugins/gangw-alias'
 import {
   formatBundleFilename,

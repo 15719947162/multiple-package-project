@@ -1,18 +1,18 @@
-import { PKG_NAME, PKG_PREFIX } from '@gangw/build-constants'
+import { PKG_NAME, PKG_PREFIX } from '@multiple-package-project/build-constants'
 
 import type { Plugin } from 'rollup'
 
 export function GangwAlias(): Plugin {
-  const themeChalk = 'theme-chalk'
-  const sourceThemeChalk = `${PKG_PREFIX}/${themeChalk}` as const
-  const bundleThemeChalk = `${PKG_NAME}/${themeChalk}` as const
+  const cssStyle = 'css-style'
+  const sourceCssStyle = `${PKG_PREFIX}/${cssStyle}` as const
+  const bundleCssStyle = `${PKG_NAME}/${cssStyle}` as const
 
   return {
     name: 'gangw-alias-plugin',
     resolveId(id) {
-      if (!id.startsWith(sourceThemeChalk)) return
+      if (!id.startsWith(sourceCssStyle)) return
       return {
-        id: id.replaceAll(sourceThemeChalk, bundleThemeChalk),
+        id: id.replaceAll(sourceCssStyle, bundleCssStyle),
         external: 'absolute',
       }
     },
