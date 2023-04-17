@@ -9,8 +9,8 @@ import rename from 'gulp-rename'
 import consola from 'consola'
 import { epOutput } from '@multiple-package-project/build-utils'
 
-const distFolder = path.resolve(__dirname, 'dist')
-const distBundle = path.resolve(epOutput, 'css-style')
+const distFolder = path.resolve(__dirname, 'dist') /** ./dist */
+const distBundle = path.resolve(epOutput, 'css-style')/** ./dist/multiple-package-project/css-style */
 
 /**
  * compile theme-chalk scss & minify
