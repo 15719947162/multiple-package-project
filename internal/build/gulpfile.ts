@@ -49,7 +49,7 @@ export default series(
     runTask('generateTypesDefinitions'),
     series(
       withTaskName('buildThemeChalk', () =>
-        run('pnpm run -C packages/theme-chalk build')
+        run('pnpm run -C packages/css-style build')
       ),
       copyFullStyle
     )

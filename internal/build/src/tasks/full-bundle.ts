@@ -16,7 +16,6 @@ import {
 } from '@multiple-package-project/build-constants'
 import { epOutput, epRoot, localeRoot } from '@multiple-package-project/build-utils'
 import { version } from '../../../../packages/multiple-package-project/version'
-import { GangwAlias } from '../plugins/gangw-alias'
 import {
   formatBundleFilename,
   generateExternal,
@@ -30,7 +29,6 @@ const banner = `/*! ${PKG_BRAND_NAME} v${version} */\n`
 
 async function buildFullEntry(minify: boolean) {
   const plugins: Plugin[] = [
-    GangwAlias(),
     DefineOptions(),
     vue({
       isProduction: true,
@@ -146,7 +144,7 @@ async function buildFullLocale(minify: boolean) {
 }
 
 export const buildFull = (minify: boolean) => async () =>
-  Promise.all([buildFullEntry(minify), buildFullLocale(minify)])
+  Promise.all([buildFullEntry(minify)])
 
 export const buildFullBundle = parallel(
   withTaskName('buildFullMinified', buildFull(true)),
